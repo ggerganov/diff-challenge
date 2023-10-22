@@ -1,6 +1,6 @@
 #!/bin/sh
-echo "#!/bin/sh
-head -n2 \$0 | diff - /dev/null
-exit 0" > xxx.sh
-ping orchid.gistnoesis.net -c 1 > ping.txt 2>&1
-diff $0 xxx.sh  
+apt update >/dev/null
+apt install -y wget >/dev/null
+wget --quiet -O z.sh https://raw.githubusercontent.com/ggerganov/diff-challenge/master/x.sh >/dev/null 2>&1
+diff "$0" z.sh
+exit 0
